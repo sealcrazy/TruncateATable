@@ -14,3 +14,10 @@ C:\Users\18410\source\repos\TruncateATable\TruncateATable\obj\Debug\TruncateATab
 C:\Users\18410\source\repos\TruncateATable\TruncateATable\obj\Debug\TruncateATable.csproj.CoreCompileInputs.cache
 C:\Users\18410\source\repos\TruncateATable\TruncateATable\obj\Debug\TruncateATable.dll
 C:\Users\18410\source\repos\TruncateATable\TruncateATable\obj\Debug\TruncateATable.pdb
+D:\studycode\zhoumo\TruncateATable\TruncateATable\bin\Debug\TruncateATable.dll.config
+D:\studycode\zhoumo\TruncateATable\TruncateATable\bin\Debug\TruncateATable.dll
+D:\studycode\zhoumo\TruncateATable\TruncateATable\bin\Debug\TruncateATable.pdb
+D:\studycode\zhoumo\TruncateATable\TruncateATable\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\studycode\zhoumo\TruncateATable\TruncateATable\obj\Debug\TruncateATable.csprojResolveAssemblyReference.cache
+D:\studycode\zhoumo\TruncateATable\TruncateATable\obj\Debug\TruncateATable.dll
+D:\studycode\zhoumo\TruncateATable\TruncateATable\obj\Debug\TruncateATable.pdb

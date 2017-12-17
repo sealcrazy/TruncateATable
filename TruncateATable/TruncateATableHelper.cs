@@ -302,6 +302,7 @@ namespace TruncateATable
         /// <returns></returns>
         public string TruncateATable(string tableName, string connStr)
         {
+            string deletedTables = tableName;
             if (string.IsNullOrEmpty(tableName))
             {
                 return "表名为空";
@@ -312,7 +313,7 @@ namespace TruncateATable
             if (count == 0)
             {
                 LogInfo($"表{tableName}无数据");
-                return "true";
+                return "true," + deletedTables + "";
             }
             var pKeyName = GetPrimaryKey(tableName, connStr);
             if (string.IsNullOrEmpty(pKeyName))
@@ -329,13 +330,13 @@ namespace TruncateATable
                 if (res == -1)
                 {
                     LogInfo($"{tableName}表数据已删除");
-                    return "true";
+                    return "true," + deletedTables + "";
                 }
             }
             else
             {
                 LogInfo($"2.2、主键被表{refTables.Item1}引用。");
-                int accumulator = 0;
+                int accumulator = 0;                
                 foreach (var item in refTables.Item2)
                 {
                     LogInfo($"查询{item}数据记录。");
@@ -344,8 +345,9 @@ namespace TruncateATable
                     if (itemCount != 0)
                     {
                         string res = TruncateATable(item, connStr);
-                        if (res == "true")
+                        if (res.Contains("true"))
                         {
+                            deletedTables = deletedTables + "," + res.Substring(res.IndexOf(","), 1);
                             LogInfo($"表{item}count{itemCount}条数据记录已被删除。");
                             accumulator++;
                         }
@@ -439,7 +441,7 @@ namespace TruncateATable
                             if (enableAccumulator == refTables.Item2.Count())
                             {
                                 LogInfo($"启用表{tableName}对表{refTables.Item1}的外键 成功。");
-                                return "true";
+                                return "true," + deletedTables + "";
                             }
                             else
                             {
@@ -470,7 +472,7 @@ namespace TruncateATable
             }
 
             LogInfo($"表{tableName}删除成功");
-            return $"true";
+            return $"true," + deletedTables + "";
         }
 
         private void LogInfo(string log)

@@ -47,6 +47,8 @@ namespace TruncateHelper
             try
             {
                 string sqlSteps = TruncateATableHelper.TruncateATable(tableName, conn);
+                string result = "true";
+                sqlSteps = sqlSteps.Substring(result.Length, (sqlSteps.Length - result.Length - 1));
                 txtResult2.AppendText($@"
 {sqlSteps}");
                 MessageBox.Show("搞定啦！");
