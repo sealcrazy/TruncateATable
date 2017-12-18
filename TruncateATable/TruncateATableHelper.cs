@@ -303,6 +303,7 @@ namespace TruncateATable
         public string TruncateATable(string tableName, string connStr)
         {
             string deletedTables = tableName;
+            string result = "true";
             if (string.IsNullOrEmpty(tableName))
             {
                 return "表名为空";
@@ -336,7 +337,7 @@ namespace TruncateATable
             else
             {
                 LogInfo($"2.2、主键被表{refTables.Item1}引用。");
-                int accumulator = 0;                
+                int accumulator = 0;
                 foreach (var item in refTables.Item2)
                 {
                     LogInfo($"查询{item}数据记录。");
@@ -347,7 +348,7 @@ namespace TruncateATable
                         string res = TruncateATable(item, connStr);
                         if (res.Contains("true"))
                         {
-                            deletedTables = deletedTables + "," + res.Substring(res.IndexOf(","), 1);
+                            deletedTables = deletedTables.Substring(result.Length, (deletedTables.Length - result.Length - 1));
                             LogInfo($"表{item}count{itemCount}条数据记录已被删除。");
                             accumulator++;
                         }

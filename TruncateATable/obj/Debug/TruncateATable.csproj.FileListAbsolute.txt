@@ -21,3 +21,10 @@ D:\studycode\zhoumo\TruncateATable\TruncateATable\bin\Debug\Oracle.ManagedDataAc
 D:\studycode\zhoumo\TruncateATable\TruncateATable\obj\Debug\TruncateATable.csprojResolveAssemblyReference.cache
 D:\studycode\zhoumo\TruncateATable\TruncateATable\obj\Debug\TruncateATable.dll
 D:\studycode\zhoumo\TruncateATable\TruncateATable\obj\Debug\TruncateATable.pdb
+D:\studycode\zhoumo\my\TruncateATable\TruncateATable\bin\Debug\TruncateATable.dll.config
+D:\studycode\zhoumo\my\TruncateATable\TruncateATable\bin\Debug\TruncateATable.dll
+D:\studycode\zhoumo\my\TruncateATable\TruncateATable\bin\Debug\TruncateATable.pdb
+D:\studycode\zhoumo\my\TruncateATable\TruncateATable\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\studycode\zhoumo\my\TruncateATable\TruncateATable\obj\Debug\TruncateATable.csprojResolveAssemblyReference.cache
+D:\studycode\zhoumo\my\TruncateATable\TruncateATable\obj\Debug\TruncateATable.dll
+D:\studycode\zhoumo\my\TruncateATable\TruncateATable\obj\Debug\TruncateATable.pdb
